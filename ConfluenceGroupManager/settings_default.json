@@ -1,0 +1,24 @@
+{
+  "GROUPID": {
+    "confluence_domain": "https://confluence.domain.com",
+    "confluence_username": "",
+    "confluence_password": "",
+    "welcome_message": null,
+    "confluence_pages": [
+      "0725",
+      "page_id",
+      "page_id"
+    ]
+  },
+  "GROUPID2": {
+    "confluence_domain": "https://confluence.domain.com",
+    "confluence_username": "",
+    "confluence_password": "",
+    "welcome_message": "Welcome to the Marketing Group!",
+    "confluence_pages": [
+      "0725",
+      "page_id",
+      "page_id"
+    ]
+  }
+}
