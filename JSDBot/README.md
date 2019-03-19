@@ -22,9 +22,10 @@ The file content should be a correctly formed json string, using the format belo
 	}
 }
 ```
-`jiraServiceDeskConfig.host` requires the protocol to be used ( http | https )
-`jiraServiceDeskConfig.port` should match the protocol provided on the host field
-`jiraServiceDeskConfig.context` if your end point is not in the root of the domain, you can add context to the path 
+
+`jiraServiceDeskConfig.host` requires the protocol to be used ( http | https )</br>
+`jiraServiceDeskConfig.port` should match the protocol provided on the host field</br>
+`jiraServiceDeskConfig.context` if your end point is not in the root of the domain, you can add context to the path</br>
 `jiraServiceDeskConfig.authorDomain` this field will be used as domain for the author request ( email field )
 
 ## Running the jar
