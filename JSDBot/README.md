@@ -1,9 +1,10 @@
-Configuration 
+## Configuration 
 
 The bot requires a configuration file to works, it is expected to be in the same location as the executable file and named "confgi.json", but you can provide the path to the file as single parameter on execution time.
 
 The file content should be a correctly formed json string, using the format below
 
+```
 {
 	dialogsConfig: {
 		host: "grpc-test.transmit.im",
@@ -17,22 +18,23 @@ The file content should be a correctly formed json string, using the format belo
 		serviceDeskId: 2,
 		username: "jiraUser",
 		password: "jiraPassword"
+		authorDomain: "@domain.com"
 	}
 }
+```
+`jiraServiceDeskConfig.host` requires the protocol to be used ( http | https )
+`jiraServiceDeskConfig.port` should match the protocol provided on the host field
+`jiraServiceDeskConfig.context` if your end point is not in the root of the domain, you can add context to the path 
+`jiraServiceDeskConfig.authorDomain` this field will be used as domain for the author request ( email field )
 
-jiraServiceDeskConfig.host requires the protocol to be used ( http | https )
-jiraServiceDeskConfig.port should match the protocol provided on the host field
-jiraServiceDeskConfig.context if your end point is not in the root of the domain, you can add context to the path 
-jiraServiceDeskConfig.authorDomain this field will be used as domain for the author request ( email field )
-
-Running the jar
+## Running the jar
 
 Java 1.8 is the minimum version to execute the file.
 JSDBot include a "fat-jar" ready to run, in build/libs directory, just include the "config.json" in the same directory o provide the path to your config file as argument 
 
-java -jar JSDBot-all.jar C:/path/to/my/config.json
+`java -jar JSDBot-all.jar C:/path/to/my/config.json`
 
-Using the bot
+## Using the bot
 
 As long as you do not have an active request the bot will take all your text input to find request types and providing you the resulting matches, non text input will be returned as unexpected parameter.
 
