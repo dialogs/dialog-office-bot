@@ -1,0 +1,13 @@
+{
+  "1064479705": {
+    "confluence_domain": "https://dialogtest.atlassian.net/wiki",
+    "confluence_username": "username",
+    "confluence_password": "password",
+    "welcome_message": "Welcome new User",
+    "confluence_pages": [
+      3735555,
+      5373953
+    ]
+  }
+}
+
