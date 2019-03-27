@@ -1,3 +1,7 @@
 venx
 venv
 .idea
+credentials.json
+token.pickle
+settings.json
+__pycache__

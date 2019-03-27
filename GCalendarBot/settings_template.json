@@ -1,0 +1,12 @@
+{
+  "user_id": 0,
+  "timezone": "+0100",
+  "show_calendars": false,
+  "credentials_file": "../credentials.json",
+  "token_file": "../token.pickle",
+  "calendar_id": "MYCALID@group.calendar.google.com",
+  "num_events_limit": 256,
+  "command0": "holidays calendar",
+  "command1": "holidays per",
+  "command2": "holidays in"
+}
