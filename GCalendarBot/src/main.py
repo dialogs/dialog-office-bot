@@ -72,8 +72,10 @@ def on_msg(*params):
     for param in params:
         log.debug("onMsg -> {}".format(param))
         try:
-
-            if param.peer.id == param.sender_uid and param.sender_uid == SETTINGS["user_id"]:
+            if param.peer.id == param.sender_uid:
+                if SETTINGS["user_id"] and param.sender_uid not in SETTINGS["user_id"]:
+                    # User Not authorized
+                    continue
                 txt = param.message.textMessage.text.lower()
                 now = datetime.datetime.now(TZONE)
 

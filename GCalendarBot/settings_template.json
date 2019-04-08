@@ -1,5 +1,5 @@
 {
-  "user_id": 0,
+  "user_id": null,
   "timezone": "+0100",
   "show_calendars": false,
   "credentials_file": "../credentials.json",
