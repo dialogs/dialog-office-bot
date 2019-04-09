@@ -56,14 +56,16 @@ def get_event_list(calendar_id: str, event_limit: int = 128, start: datetime.dat
     fmt_b = "%H:%M"
     out = ""
     for evt in API.get_following_events(calendar_id, start, event_limit, end):
-        event_start = datetime.datetime.fromisoformat(evt["start"]["dateTime"])
-        event_end = datetime.datetime.fromisoformat(evt["end"]["dateTime"])
+        event_start = datetime.datetime.fromisoformat(
+            evt["start"]["dateTime"] if "dateTime" in evt["start"] else evt["start"]["date"])
+        event_end = datetime.datetime.fromisoformat(
+            evt["end"]["dateTime"] if "dateTime" in evt["start"] else evt["end"]["date"])
         event_delta = event_end - event_start
-        out += ">{0}->{1} => {2} ({3})".format(
+        out += ">{0}->{1} => {2} {3}".format(
             event_start.strftime(fmt),
             event_end.strftime(fmt if event_delta.days > 0 else fmt_b),
-            evt["summary"],
-            evt["description"])
+            evt["summary"] if "summary" in evt else "",
+            str("("+evt["description"]+")") if "description" in evt else "")
         out += "\n"
     return out
 
